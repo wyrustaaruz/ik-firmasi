@@ -10,5 +10,4 @@ export class AppComponent {
   about = 'About Us';
   home = 'Home';
   candidates = 'Candidates';
-  candidatesdetail = 'Candidates Detail';
 }
