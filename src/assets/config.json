@@ -1,0 +1,4 @@
+{
+  "candidatesUrl": "https://randomuser.me/api?results=10",
+  "textfile": "assets/textfile.txt"
+}

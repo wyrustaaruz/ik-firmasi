@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'ik-firmasi';
+  title = 'Saha BT IK App';
+  about = 'About Us';
+  home = 'Home';
+  candidates = 'Candidates';
+  candidatesdetail = 'Candidates Detail';
 }
