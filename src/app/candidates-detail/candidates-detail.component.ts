@@ -8,7 +8,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CandidatesDetailComponent implements OnInit {
   private gender  = '';
+  private title = '';
+  private first = '';
+  private last = '';
   private email  = '';
+  private cell  = '';
+  private thumbnail  = '';
 
 
   constructor(
@@ -18,7 +23,12 @@ export class CandidatesDetailComponent implements OnInit {
 
   ngOnInit() {
     this.gender = this.route.snapshot.paramMap.get('gender');
+    this.title = this.route.snapshot.paramMap.get('title');
+    this.first = this.route.snapshot.paramMap.get('first');
+    this.last = this.route.snapshot.paramMap.get('last');
     this.email = this.route.snapshot.paramMap.get('email');
+    this.cell = this.route.snapshot.paramMap.get('cell');
+    this.thumbnail = this.route.snapshot.paramMap.get('thumbnail');
   }
 
   gotoCandidates() {

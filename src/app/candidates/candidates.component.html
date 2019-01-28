@@ -1,8 +1,17 @@
 <div class="container" style=" margin-top: 1% ">
-  <ul class="candidates">
-    <li *ngFor="let person of candidates.results">
-        <span>{{person.name.title}} {{person.name.first}} {{person.name.last}}</span>
-        <button class="info" title="Info Candidate" [routerLink]="['/candidates-detail', person.gender,person.email]">i</button>
-    </li>
-  </ul>
+  <div class="icerik">
+    <ul class="candidates">
+      <li *ngFor="let person of candidates.results">
+          <span>{{person.name.title}} {{person.name.first}} {{person.name.last}}</span>
+          <button class="info" title="Info Candidate" [routerLink]="['/candidates-detail',
+          person.gender,
+          person.name.title,
+          person.name.first,
+          person.name.last,
+          person.email,
+          person.cell,
+          person.picture.thumbnail]">i</button>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,6 +1,11 @@
-<div class="container" style=" margin-top: 1% ">
-<h3>"{{ email }}"</h3>
-<p>{{ gender }}  <br>
-  <button (click)="gotoCandidates()">Back</button>
-</p>
+<div class="container">
+  <div class="card">
+    <h3>{{ title }}. {{ first }} {{ last }}</h3>
+    <img src="{{thumbnail}}">
+    <p>Email: {{email}}</p>
+    <p>Gender: {{gender}}</p>
+    <p>Mobile Phone Number: {{cell}}</p>
+    <br>
+    <button (click)="gotoCandidates()">Back</button>
+  </div>
 </div>

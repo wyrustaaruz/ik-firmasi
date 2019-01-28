@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'about-us', component: AboutUsComponent },
   { path: 'candidates', component: CandidatesComponent },
-  { path: 'candidates-detail/:gender/:email', component: CandidatesDetailComponent },
+  { path: 'candidates-detail/:gender/:title/:first/:last/:email/:cell/:thumbnail', component: CandidatesDetailComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, // starting page
   { path: '**', component: PagenotfoundComponent} // page not found
 ];
