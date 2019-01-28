@@ -1,42 +1,39 @@
-.candidates
-  padding-left: 0
-  border-style: solid
-  border-width: 1px
-
-.candidates ul
-  display: table-cell
-
-.candidates li
-  position: relative
-  cursor: pointer
-  background-color: #EEE
-  line-height: 2.6em
-  border-radius: 4px
-  width: 300px
-  margin: 1em
-  align-items: center
-  display: table
-  vertical-align: middle
-  text-align: center
-
-
-.candidates li:hover
-  color: #607D8B
-  background-color: #DDD
-
-button.info
-  position: absolute
-  right: 0
-  background-color: gray !important
-  color: white
-  width: 2em
-  height: 100%
-
 .container
   display: flex
   align-items: center
   justify-content: center
+  .candidates
+    padding-left: 0
+    border-style: solid
+    border-width: 1px
+    ul
+      display: table-cell
+    li
+      position: relative
+      cursor: pointer
+      background-color: #EEE
+      line-height: 2.6em
+      border-radius: 4px
+      width: 300px
+      margin: 1em
+      align-items: center
+      display: table
+      vertical-align: middle
+      text-align: center
+      &:hover
+        color: #607D8B
+        background-color: #DDD
+      button
+        position: absolute
+        right: 0
+        background-color: gray !important
+        color: white
+        width: 2em
+        height: 100%
 
-.card
-  margin-top: 1%
+
+.detail
   width: 300px
+  margin: auto
+  button
+    margin-left: 15px

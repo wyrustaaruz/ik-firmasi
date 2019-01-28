@@ -1,11 +1,10 @@
 <div class="container">
   <div class="card">
-    <h3>{{ title }}. {{ first }} {{ last }}</h3>
-    <img src="{{thumbnail}}">
-    <p>Email: {{email}}</p>
-    <p>Gender: {{gender}}</p>
-    <p>Mobile Phone Number: {{cell}}</p>
+    <h3>{{ this.toUpperFirsLetter(data.name.title) }}. {{ this.toUpperFirsLetter(data.name.first) }} {{ this.toUpperFirsLetter(data.name.last) }}</h3>
+    <img src="{{data.picture.thumbnail}}">
+    <p>Email: {{data.email}}</p>
+    <p>Gender: {{this.toUpperFirsLetter(data.gender)}}</p>
+    <p>Mobile Phone Number: {{data.cell}}</p>
     <br>
-    <button (click)="gotoCandidates()">Back</button>
   </div>
 </div>

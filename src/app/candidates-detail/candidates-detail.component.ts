@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-candidates-detail',
@@ -7,34 +6,18 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./candidates-detail.component.sass']
 })
 export class CandidatesDetailComponent implements OnInit {
-  private gender  = '';
-  private title = '';
-  private first = '';
-  private last = '';
-  private email  = '';
-  private cell  = '';
-  private thumbnail  = '';
 
+  // I can use EventEmitter for clean URL
+  @Input() private data: any = {};
 
+  // For Upper case first letter
+  toUpperFirsLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   constructor(
-    private route: ActivatedRoute,
-    private router: Router
   ) {  }
 
   ngOnInit() {
-    this.gender = this.basHarfBuyut(this.route.snapshot.paramMap.get('gender'));
-    this.title = this.basHarfBuyut(this.route.snapshot.paramMap.get('title'));
-    this.first = this.basHarfBuyut(this.route.snapshot.paramMap.get('first'));
-    this.last = this.basHarfBuyut(this.route.snapshot.paramMap.get('last'));
-    this.email = this.route.snapshot.paramMap.get('email');
-    this.cell = this.route.snapshot.paramMap.get('cell');
-    this.thumbnail = this.route.snapshot.paramMap.get('thumbnail');
   }
 
-  basHarfBuyut(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-  gotoCandidates() {
-    this.router.navigate(['/candidates']);
-  }
 }
