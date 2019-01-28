@@ -22,15 +22,18 @@ export class CandidatesDetailComponent implements OnInit {
   ) {  }
 
   ngOnInit() {
-    this.gender = this.route.snapshot.paramMap.get('gender');
-    this.title = this.route.snapshot.paramMap.get('title');
-    this.first = this.route.snapshot.paramMap.get('first');
-    this.last = this.route.snapshot.paramMap.get('last');
+    this.gender = this.basHarfBuyut(this.route.snapshot.paramMap.get('gender'));
+    this.title = this.basHarfBuyut(this.route.snapshot.paramMap.get('title'));
+    this.first = this.basHarfBuyut(this.route.snapshot.paramMap.get('first'));
+    this.last = this.basHarfBuyut(this.route.snapshot.paramMap.get('last'));
     this.email = this.route.snapshot.paramMap.get('email');
     this.cell = this.route.snapshot.paramMap.get('cell');
     this.thumbnail = this.route.snapshot.paramMap.get('thumbnail');
   }
 
+  basHarfBuyut(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   gotoCandidates() {
     this.router.navigate(['/candidates']);
   }

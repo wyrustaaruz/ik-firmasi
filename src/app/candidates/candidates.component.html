@@ -1,7 +1,7 @@
 <div class="container" style=" margin-top: 1% ">
     <ul class="candidates">
       <li *ngFor="let person of candidates.results">
-          <span>{{person.name.title}} {{person.name.first}} {{person.name.last}}</span>
+          <span>{{this.basHarfBuyut(person.name.title)}} {{this.basHarfBuyut(person.name.first)}} {{this.basHarfBuyut(person.name.last)}}</span>
           <button class="info" title="Info Candidate" [routerLink]="['/candidates-detail',
           person.gender,
           person.name.title,

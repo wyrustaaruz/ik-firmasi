@@ -14,6 +14,9 @@ export class CandidatesComponent implements OnInit {
   ngOnInit() {
     this.get_Candidates();
   }
+  basHarfBuyut(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   get_Candidates() {
     this.httpClient.get('https://randomuser.me/api?results=10').subscribe(res => {
       console.log(res);
